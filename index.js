@@ -9,7 +9,7 @@ function setupMemoryOptimization() {
                 global.gc();
             }
             const memoryUsage = process.memoryUsage();
-            console.log(`🔄 Memory Cleaned - Heap: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(2)}MB`);
+            console.log(`🔄 Memory Cleaned - Heap: ${(memoryUsage.heapUsed / 1024 / 1024).toFixed(3)}MB`);
         } catch (err) {
             console.error("Memory cleanup error:", err.message);
         }
@@ -19,7 +19,7 @@ function setupMemoryOptimization() {
 setupMemoryOptimization();
 
 // ==================== ULTRA PRO SPEED BOOSTER ====================
-// 🔥 ADDED BY BOSS-MD OPTIMIZER (NO DELETIONS)
+// 🔥 ADDED BY jutt OPTIMIZER (NO DELETIONS)
 const speedCache = {
     groups: new Map(),
     users: new Map(),
@@ -69,11 +69,11 @@ setInterval(() => {
     // Auto-clean old cache
     if (now - speedCache.lastClean > 180000) {
         for (const [key, val] of speedCache.groups.entries()) {
-            if (now - val.timestamp > 300000) speedCache.groups.delete(key);
+            if (now - val.timestamp > 30000) speedCache.groups.delete(key);
         }
         speedCache.lastClean = now;
     }
-}, 60000);
+}, 6000);
 
 const {
   default: makeWASocket,
@@ -120,7 +120,7 @@ const Crypto = require('crypto');
 const path = require('path');
 const prefix = config.PREFIX;
 
-const ownerNumber = ['923266105873'];
+const ownerNumber = [config.OWNER_NUMBER || '923266105873'];
 
 const tempDir = path.join(os.tmpdir(), 'cache-temp');
 if (!fs.existsSync(tempDir)) {
@@ -148,9 +148,12 @@ setInterval(clearTempDir, 5 * 60 * 1000);
 //===================SESSION-AUTH============================
 if (!fs.existsSync(__dirname + '/sessions/creds.json')) {
     if (config.SESSION_ID && config.SESSION_ID.trim() !== "") {
-        const sessdata = config.SESSION_ID.replace("FAIZAN-MD~", '');
+        const sessdata = config.SESSION_ID.replace("FAIZAN_MD~", '');
         try {
             const decodedData = Buffer.from(sessdata, 'base64').toString('utf-8');
+            if (!fs.existsSync(__dirname + '/sessions')) {
+                fs.mkdirSync(__dirname + '/sessions', { recursive: true });
+            }
             fs.writeFileSync(__dirname + '/sessions/creds.json', decodedData);
             console.log("✅ Session loaded from SESSION_ID");
         } catch (err) {
@@ -258,6 +261,7 @@ async function handleMessageUltra(message) {
             case 'extendedTextMessage': body = message.message.extendedTextMessage?.text || ''; break;
             case 'imageMessage': body = message.message.imageMessage?.caption || ''; break;
             case 'videoMessage': body = message.message.videoMessage?.caption || ''; break;
+            case 'buttonsResponseMessage': body = message.message.buttonsResponseMessage?.selectedButtonId || ''; break;
             default: body = '';
         }
         
@@ -275,8 +279,13 @@ async function handleMessageUltra(message) {
             if (cmd) {
                 Promise.resolve().then(async () => {
                     try {
+                        const bodyArgs = body.trim().split(/ +/).slice(1);
                         await cmd.function(conn, message, m, {
-                            from, sender, isGroup, isOwner,
+                            from, sender, isGroup, isOwner, groupMetadata,
+                            args: bodyArgs,
+                            q: bodyArgs.join(' '),
+                            quoted: m.quoted,
+                            react: (emoji) => conn.sendMessage(from, { react: { text: emoji, key: message.key } }).catch(() => {}),
                             reply: (text) => {
                                 conn.sendMessage(from, { text }, { quoted: message }).catch(() => {});
                             }
@@ -346,7 +355,7 @@ async function connectToWA() {
             console.log('Bot connected to whatsapp ✅');
             
             // 🔥 ULTRA FAST CONNECT MESSAGE ADDED
-            let up = `*Hello there FAIZAN-MD User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet 𝘽𝙊𝙎𝙎-𝙈𝘿 WhatsApp Bot.\n\n *Thanks for using 𝘽𝙊𝙎𝙎-𝙈𝘿 \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VbC210i2P59dHYVlXW1K \n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/𝐁𝐎𝐒𝐒-𝐌𝐃-BOTZ/Boss-Ai\n\n> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝓑𝓞𝓢𝓢-𝓜𝓓 ❣️ \ud83d\udda4`;
+            let up = `*Hello there ZAIDI-MD~ User! \ud83d\udc4b\ud83c\udffb* \n\n> Simple , Straight Forward But Loaded With Features \ud83c\udf8a, Meet 𝘽𝙊𝙎𝙎-𝙈𝘿 WhatsApp Bot.\n\n *Thanks for using 𝘽𝙊𝙎𝙎-𝙈𝘿 \ud83d\udea9* \n\n> Join WhatsApp Channel :- ⤵️\n \nhttps://whatsapp.com/channel/0029VbC210i2P59dHYVlXW1K \n\n- *YOUR PREFIX:* = ${prefix}\n\nDont forget to give star to repo ⬇️\n\nhttps://github.com/𝐁𝐎𝐒𝐒-𝐌𝐃-BOTZ/Boss-Ai\n\n> © ᴘᴏᴡᴇʀᴇᴅ ʙʏ 𝓑𝓞𝓢𝓢-𝓜𝓓 ❣️ \ud83d\udda4`;
             
             setTimeout(() => {
                 conn.sendMessage(conn.user.id, { 
@@ -789,7 +798,7 @@ if (config.AUTO_REACT === 'true' && senderNumber.includes("923076411099") && !is
 }
 
 app.get("/", (req, res) => {
-    res.send("FAIZAN-MD⁸⁷³ STARTED ✅");
+    res.send("ZAIDI-MD STARTED ✅");
 });
 
 app.listen(port, () => console.log(`Server listening on port http://localhost:${port}`));
@@ -812,7 +821,7 @@ process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', promise, 'reason:', reason);
 });
 // ======================
-// ✅ FAIZAN-MD BOT FIX
+// ✅ ZAIDI-MD~ BOT FIX
 // ======================
 
 // 1. CREDENTIALS LOADER FUNCTION
@@ -831,8 +840,8 @@ function loadCredentials() {
         
         console.log('✅ Token mil gayi (' + token.length + ' chars)');
         
-        // "FAIZAN-MD~" hatao agar hai to
-        const cleanToken = token.startsWith('FAIZAN-MD~') 
+        // "ZAIDI-MD~" hatao agar hai to
+        const cleanToken = token.startsWith('ZAIDI-MD~') 
             ? token.substring(7) 
             : token;
         
@@ -856,7 +865,7 @@ function loadCredentials() {
 // 2. BOT START FUNCTION
 async function startWhatsAppBot() {
     console.log('\n🚀 ==============================');
-    console.log('🚀 FAIZAN-MD BOT STARTING...');
+    console.log('🚀 𓆩ZAIDI-MD𓆪BOT STARTING...');
     console.log('🚀 ==============================\n');
     
     // Credentials load karo
@@ -886,13 +895,13 @@ async function startWhatsAppBot() {
             if (update.connection === 'open') {
                 console.log('\n🎉🎉🎉 SUCCESS! 🎉🎉🎉');
                 console.log('✅ WHATSAPP CONNECTED!');
-                console.log('✅ FAIZAN-MD IS NOW ACTIVE!');
+                console.log('✅  𓆩ZAIDI-MD𓆪 IS NOW ACTIVE!');
                 console.log('👤 User ID:', sock.user?.id);
                 
                 // Owner ko confirmation message bhejo
                 setTimeout(() => {
                     sock.sendMessage('923266105873@s.whatsapp.net', {
-                        text: `✅ *FAIZAN-MD ACTIVATED*\n\nBot successfully connected via token!\nTime: ${new Date().toLocaleTimeString()}\n\nNow all commands will work perfectly! 🎯`
+                        text: `✅ *𝐙͢͠꧊𝛂͜ı֟፝𝛛֟ı֟፝ 𝐓𝚵〆͎𝐊 ACTIVATED*\n\nBot successfully connected via token!\nTime: ${new Date().toLocaleTimeString()}\n\nNow all commands will work perfectly! 🎯`
                     }).catch(e => console.log('Message send error:', e.message));
                 }, 2000);
             }
