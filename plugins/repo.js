@@ -13,7 +13,7 @@ cmd({
     filename: __filename,
 },
 async (conn, mek, m, { from, reply }) => {
-    const githubRepoURL = 'https://github.com/ANAYAT-AI/ANAYAT-AI';
+    const githubRepoURL = 'https://github.com/JOEN-MEHAR007/';
 
     try {
         // Extract username and repo name from the URL
@@ -29,7 +29,7 @@ async (conn, mek, m, { from, reply }) => {
         const repoData = await response.json();
 
         // Format the repository information
-        const formattedInfo = `*BOT NAME:*\n> ${repoData.name}\n\n*OWNER NAME:*\n> ${repoData.owner.login}\n\n*STARS:*\n> ${repoData.stargazers_count}\n\n*FORKS:*\n> ${repoData.forks_count}\n\n*GITHUB LINK:*\n> ${repoData.html_url}\n\n*DESCRIPTION:*\n> ${repoData.description || 'No description'}\n\n*Don't Forget To Star and Fork Repository*\n\n> *𝐀𝐍𝐀𝐘𝐀𝐓-𝐀𝐈🖤*`;
+        const formattedInfo = `*BOT NAME:*\n> ${repoData.name}\n\n*OWNER NAME:*\n> ${repoData.owner.login}\n\n*STARS:*\n> ${repoData.stargazers_count}\n\n*FORKS:*\n> ${repoData.forks_count}\n\n*GITHUB LINK:*\n> ${repoData.html_url}\n\n*DESCRIPTION:*\n> ${repoData.description || 'No description'}\n\n*Don't Forget To Star and Fork Repository*\n\n> *JOEN-MEHAR007🖤*`;
 
         // Send image with caption
         await conn.sendMessage(from, {
@@ -40,8 +40,8 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363420933039839@newsletter',
-                    newsletterName: '𝐀𝐍𝐀𝐘𝐀𝐓-𝐀𝐈',
+                    newsletterJid: '120363404616984159@newsletter',
+                    newsletterName: 'JOEN-MEHAR007',
                     serverMessageId: 143
                 }
             }
@@ -58,8 +58,8 @@ async (conn, mek, m, { from, reply }) => {
                 forwardingScore: 999,
                 isForwarded: true,
                 forwardedNewsletterMessageInfo: {
-                    newsletterJid: '120363420933039839@newsletter',
-                    newsletterName: '𝐀𝐍𝐀𝐘𝐀𝐓-𝐀𝐈',
+                    newsletterJid: 'https://120363404616984159@newsletter',
+                    newsletterName: 'JOEN-MEHAR007',
                     serverMessageId: 143
                 }
             }
