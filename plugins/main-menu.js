@@ -251,7 +251,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
 ┃◈┃• 🌈 luma
 ┃◈┃• 🎧 dj
 ┃◈┃• 👑 X-BOTZ
-┃◈┃• 🤵 ANAYAT 
+┃◈┃• 🤵 JOEN-MEHAR007 
 ┃◈┃• 🧠 gpt4
 ┃◈┃• 🔍 bing
 ┃◈┃• 🎨 imagine
@@ -353,7 +353,7 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
                     forwardingScore: 999,
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
-                        newsletterJid: '120363420933039839@newsletter',
+                        newsletterJid: '120363404616984159@newsletter',
                         newsletterName: config.BOT_NAME,
                         serverMessageId: 143
                     }
