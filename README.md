@@ -1,7 +1,7 @@
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-# 〘 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 〙  
+# 〘 JONE_MD 〙  
 > ✨ *Ultra Pro Max WhatsApp Bot* ✨  
 <a href="https://github.com/Faizan-MD007"><img title="Author" src="https://img.shields.io/badge/FAZI-MD-black?style=for-the-badge&logo=Github"></a> <a href="https://youtube.com/@arslanmdofficial"><img title="Author" src="https://img.shields.io/badge/YOUTUBE SUBSCRIBE-red?style=for-the-badge&logo=youtube"></a> <a href="https://wa.me/923266105873"><img title="Author" src="https://img.shields.io/badge/Contact Me-black?style=for-the-badge&logo=whatsapp"></a>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
@@ -16,7 +16,7 @@
                font-size: 45px; 
                font-weight: bold;">
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-    ✨ 𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃 ✨
+    ✨ JONE_MD ✨
     <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
   </span>
 </h1>
@@ -103,6 +103,6 @@ Do not sell, misuse, or use without giving credits.
 ---
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <h2 align="center">
-  🌈✨ Thanks for using <span style="color:#00FFFF">𝐅𝐀𝐈𝐙𝐀𝐍-𝐌𝐃</span> ✨🌈
+  🌈✨ Thanks for using <span style="color:#00FFFF">JONE_MD</span> ✨🌈
 </h2>
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
