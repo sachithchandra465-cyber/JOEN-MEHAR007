@@ -24,22 +24,22 @@ async (conn, mek, m, { from, reply }) => {
             },
             message: {
                 extendedTextMessage: {
-                    text: "ᴀɴᴀʏᴀᴛ ʜᴀᴄᴋᴇʀ",
+                    text: "JOEN-MEHAR007",
                     contextInfo: {
                         mentionedJid: [],
-                        verifiedBizName: "ᴀɴᴀʏᴀᴛ ʜᴀᴄᴋᴇʀ"
+                        verifiedBizName: "JOEN-MEHAR007"
                     }
                 }
             }
         };
 
         let dec = `
-╔═══❖・【 ᴀɴᴀʏᴀᴛ-𝙰𝙸 𝙼𝙴𝙽𝚄 】・❖═══╗
+╔═══❖・【 JOEN-MEHAR007 𝙼𝙴𝙽𝚄 】・❖═══╗
 ║
 ║  ✦ *Bot Name:* ${config.BOT_NAME}
 ║  ✦ *Version:* 5..
 ║  ✦ *Uptime:* ${runtime(process.uptime())}
-║  ✦ *Owner:* ᴀɴᴀʏᴀᴛ ʜᴀᴄᴋᴇʀ 🫶🏻
+║  ✦ *Owner:* JOEN-MEHAR007 🫶🏻
 ║  ✦ *Platform:* ${os.platform()}
 ║  ✦ *Mode:* ${config.MODE}
 ║  ✦ *Prefix:* [ ${config.PREFIX} ]
@@ -239,7 +239,7 @@ async (conn, mek, m, { from, reply }) => {
 ║  • .currency
 ║  • .exchange
 ║
-╚══❖・© ᴾᴼᵂᴱᴿᴱᴰ ᴮʸ ᴀɴᴀʏᴀᴛ-𝙰𝙸・❖
+╚══❖・© ᴾᴼᵂᴱᴿᴱᴰ ᴮʸ JOEN-MEHAR007・❖
         `;
 
         await conn.sendMessage(
@@ -253,11 +253,11 @@ async (conn, mek, m, { from, reply }) => {
                     isForwarded: true,
                     forwardedNewsletterMessageInfo: {
                         newsletterJid: '120363420933039839@newsletter',
-                        newsletterName: 'ᴀɴᴀʏᴀᴛ-𝙰𝙸',
+                        newsletterName: 'JOEN-MEHAR007',
                         serverMessageId: 143
                     },
                     externalAdReply: {
-                        title: "ᴀɴᴀʏᴀᴛ-𝙰𝙸 𝚅𝙴𝚁𝙸𝙵𝙸𝙴𝙳",
+                        title: "JOEN-MEHAR007 𝚅𝙴𝚁𝙸𝙵𝙸𝙴𝙳",
                         body: "WhatsApp Verified Business",
                         mediaType: 1,
                         thumbnailUrl: MENU_IMAGE_URL,
