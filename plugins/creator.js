@@ -13,9 +13,9 @@ async (conn, mek, m, { from, sender, reply }) => {
     try {
         // Owner information (you can modify these values)
         const ownerInfo = {
-            name: "𝙰𝙽𝙰𝚈𝙰𝚃 𝙷𝙰𝙲𝙺𝙴𝚁 🇵🇰",
-            number: "+923452401207",
-            photo: "https://files.catbox.moe/e65lv9.jpg",
+            name: "JOEN-MEHAR007 🇵🇰",
+            number: "+923303030400",
+            photo: "https://eliteprotech-url.zone.id/1780041359081m6jlml.jpg",
             bio: "The creator of this amazing bot"
         };
 
@@ -48,7 +48,7 @@ async (conn, mek, m, { from, sender, reply }) => {
     } catch (e) {
         console.error("Creator Command Error:", e);
         // Fallback text if image fails
-        await reply(`👑 *Creator Info*\n\nName: 𝙰𝙽𝙰𝚈𝙰𝚃-𝙰𝙸\nNumber: +923452401207\n\nContact for bot support!`);
+        await reply(`👑 *Creator Info*\n\nName: JOEN-MEHAR007\nNumber: +923303030400\n\nContact for bot support!`);
     }
 });
 
