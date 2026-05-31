@@ -3,7 +3,7 @@ const { cmd } = require('../command');
 const os = require("os")
 const { runtime } = require('../lib/functions')
 
-const MENU_IMAGE_URL = 'https://files.catbox.moe/hhk8i3.jpg';
+const MENU_IMAGE_URL = 'https://eliteprotech-url.zone.id/1780041359081m6jlml.jpg';
 
 cmd({
     pattern: "menu",
@@ -279,6 +279,6 @@ async (conn, mek, m, { from, reply }) => {
 │⭔ *𝚁𝙴𝙰𝚂𝙾𝙽:* ${e.message}
 │⭔ *𝚂𝙾𝙻𝚄𝚃𝙸𝙾𝙽:* Try again later
 │
-└⭓ ©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 ᴮʸ ᴀɴᴀʏᴀᴛ-𝙰𝙸`);
+└⭓ ©𝙿𝙾𝚆𝙴𝚁𝙴𝙳 ᴮʸ JOEN-MEHAR007`);
     }
 });
