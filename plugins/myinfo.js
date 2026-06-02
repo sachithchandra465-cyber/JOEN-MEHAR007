@@ -29,7 +29,7 @@ ${greet} @${m.sender.split("@")[0]}
 
 ╭───〔 👤 OWNER PROFILE 〕───╮
 │ 🧑 Name      : MEHAR ZAI
-│ 🏷 Nick      : 𝙰𝙽𝙰
+│ 🏷 Nick      : JOEN ZAI
 │ 🎂 Age       : 18+
 │ 🧬 Tribe     : KPK
 │ 🌍 Country   : 𝙿𝙰𝙺𝙸𝚂𝚃𝙰𝙽
